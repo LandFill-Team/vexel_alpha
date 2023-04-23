@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    <link rel="stylesheet" href="global.css">
+    
+    <title>D_Landfill_Vexel</title>
+</head>
+<body>
+    
+    <div class="w-full flex justify-center items-center flex-col gradient-bg-vecsel"> 
+    <!-- <nav class="w-full flex md:justify-center items-center p-4"> 
+
+        <div class="md:flex-[0.5] flex-initial justify-center items-center"> 
+             <img src="./images/Vexell.svg" class="w-22 cursor-pointer"></img>
+        </div>
+
+        <ul class="text-white text-[16px] text-semibold md:flex hidden list-none flex-row justify-between items-center flex-initial font-display">           
+            <li class="py-2 px-4 mx-2 cursor-pointer"> 
+                Home 
+            </li>
+            <li class="py-2 px-4 mx-2 cursor-pointer"> 
+                About
+            </li>
+            <li class="py-2 px-4 mx-2 cursor-pointer"> 
+                Marketplace
+            </li> 
+            <button 
+            id="ron1"
+            onclick="connectMetamask()"
+            class="flex justify-center items-center w-[100px] bg-[#25618b] p-2 px-7 rounded-full cursor-pointer hover:bg-[#2546bd] text-[16px]"
+    >
+    CONNECT
+    </button> 
+        </ul>
+    </nav> 
+        <p id="accountArea">     
+    </p> -->
+
+    <div class="navbar">
+        <div class="block flex-nav md:flex justify-between items-center">
+            <div class="nav-header">
+                <h2 class="text-2xl text-white
+                ">D_<span>Landfill</span></h2>
+                <button class="nav-toggle" id="navToggle">
+                    <i class='bx bx-bar-chart'></i>    
+                </button>
+            </div>
+            <nav class="nav-links text-dimWhite" id="nav-links">
+                <ul>
+                    <li class="nav-link"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="#">About</a></li>
+                    <li class="nav-link"><a href="#">Marketplace</a></li>
+                    <li class="nav-link"><a href="#" onclick="connectMetamask()"><span>CONNECT</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Container Forms     -->
+    <section class="container forms">
+        <div class="form login blue-glassmorphism">
+            <div class="form-content">
+                <header>CREATE VEXEL</header>
+                <form action="#"> 
+                    <div class="field input-field">
+                        <input type="text"
+                        placeholder="Enter Address" class="input" id="inputTo">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="number"
+                        placeholder="Enter Amount" class="text-white" id="inputAmount">  
+                        <p id="vexel"></p>
+                        <p id="to"></p>
+                        <p id="amountSum"></p>                     
+                    </div>                    
+                    
+                    <div class="field button-field">
+                        <img src="/images/Vexel.png" alt="vexel" class='vexel-img'>
+                        <button class="border-[1px] border-[#111e3e] hover:bg-[#353a4f]"
+                            onclick="CreateVexel()">CREATE VEXEL</button>
+                    </div>
+                  
+                </form>
+                  <div class="form-link"> 
+                        <span>Cash out your VEXEL! 
+                            <a href="#" class="link signup-link">CASH</a>
+                        </span>
+                    </div>
+            </div>            
+            <div class="field button-field">
+                <i class='bx bx-wallet wallet-icon'></i>
+                <button class="border-[1px] border-[#111e3e] hover:bg-[#353a4f]"
+                    onclick="connectMetamask()">CONNECT WALLET</button>
+                    <p id="accountArea"></p>
+            </div>                       
+        </div>
+
+        <!-- CASH VEXEL -->
+
+        <div class="form signup blue-glassmorphism">
+            <div class="form-content">
+
+                <header>CASH VEXEL</header>
+
+                <form action="#"> 
+                    <div class="field input-field">
+                        <input type="text"
+                        placeholder="Enter Vexel" class="input" id="UserVexel">
+                    </div>                                     
+                    
+                    <div class="field button-field">
+                        <button class="border-[1px] border-[#111e3e] hover:bg-[#353a4f] first-letter:onclick="CashVexel()">CASH OUT A VEXEL</button>
+                    </div>
+                  
+                </form>
+                  <div class="form-link"> 
+                        <span>Are you ready to create a new Vexel? 
+                            <a href="#" class=" link login-link">Create</a>
+                        </span>
+                    </div>
+            </div>            
+            <div class="field button-field">
+                <i class='bx bx-wallet wallet-icon'></i>
+                <button class="border-[1px] border-[#111e3e] hover:bg-[#353a4f]"
+                    onclick="connectMetamask()">CONNECT WALLET</button>
+                    <p id="accountArea"></p>
+            </div>      
+                         
+        </div>
+    </section>   
+</div>
+
+    <script src="js/script.js"></script>
+    <script src="/js/connectWallet.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/navBar.js"></script>
+</body>
+</html>
